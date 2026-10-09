@@ -1,7 +1,5 @@
 import logging
-import sys
 from pathlib import Path
-
 
 LOG_FILE = Path(__file__).resolve().parent.parent.parent /"logs/etl_runs.log"
 

@@ -1,6 +1,59 @@
-.venv/
-logs/
-*__pycache__/
-*.egg-info
-*.mypy_cache
+# Secrets and local configuration
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyright/
+.hypothesis/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging and build output
+build/
+dist/
+.eggs/
+*.egg
+*.egg-info/
+pip-wheel-metadata/
+
+# Test and coverage output
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# Runtime output
+logs/
+*.log
+data/raw_data.json
+
+# Airflow local runtime files
+airflow.cfg
+airflow.db
+standalone_admin_password.txt
+simple_auth_manager_passwords.json.generated
+webserver_config.py
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

@@ -5,10 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "api_etl"
 version = "0.1.0"
-description = "ETL pipeline for API extraction and SQLite loading"
+description = "Airflow-orchestrated API ETL pipeline with PostgreSQL loading"
 requires-python = ">=3.10"
 dependencies = [
     "requests>=2.31.0",
+    "psycopg2-binary==2.9.13",
+    "apache-airflow==3.3.2"
 ]
 
 [project.scripts]

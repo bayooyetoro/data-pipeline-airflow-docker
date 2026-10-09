@@ -1,8 +1,17 @@
 class ETLErrors(Exception):
-    pass
+    """Base exception for expected ETL failures."""
 
 class ExtractionError(ETLErrors):
-    pass
+    """Raised when source data cannot be extracted."""
 
-class FileNotFoundError(ETLErrors):
-    pass
+class TransformationError(ETLErrors):
+    """Raised when raw data cannot be read or transformed."""
+
+class DatabaseConnectionError(ETLErrors):
+    """Raised when a database connection cannot be established."""
+
+class DatabaseOperationError(ETLErrors):
+    """Raised when a database operation fails."""
+
+class ConfigurationError(ETLErrors):
+    """Raised when required configuration is missing."""
